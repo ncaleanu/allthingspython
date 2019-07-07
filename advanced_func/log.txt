@@ -1,0 +1,6 @@
+
+2019-05-30 20:17:49,338  DEBUG    [logging.py:23] Now you may see me!
+2019-05-30 20:17:49,339  INFO     [logging.py:24] This will.
+2019-05-30 20:17:49,339  WARNING  [logging.py:25] Me too
+2019-05-30 20:17:49,340  ERROR    [logging.py:26] Same
+2019-05-30 20:17:49,340  CRITICAL [logging.py:27] I obviously do. Im the most prioritized.

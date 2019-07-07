@@ -1,0 +1,56 @@
+#:kivy 1.11.1
+
+<Ball>:
+    size: 50, 50
+    canvas:
+        Ellipse:
+            source: 'ball.jpg'
+            pos: self.pos
+            size: self.size
+
+<Paddle>:
+    size: 15, 150
+    canvas:
+        Color:
+            rgb: (1, 1, 1)
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+<Game>:
+    ball: game_ball
+    player1: player_left
+    player2: player_right
+
+    canvas:
+        Rectangle:
+            source: 'field.jpg'
+            pos: 0, 0
+            size: self.width, self.height
+
+    Label:
+        font_size: 75
+        center_x: root.width / 4
+        top: root.top - 50
+        text: str(root.player1.score)
+
+    Label:
+        font_size: 75
+        center_x: root.width * 3 / 4
+        top: root.top - 50
+        text: str(root.player2.score)
+
+    Ball:
+        id: game_ball
+        center: self.parent.center
+
+    Paddle:
+        id: player_left
+        x: root.x + 10
+        center_y: root.center_y
+
+    Paddle:
+        id: player_right
+        x: root.width - self.width - 10
+        center_y: root.center_y
+
